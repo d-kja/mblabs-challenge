@@ -5,6 +5,8 @@
 | EN-US            | [Link](languages/en-us.md) |
 | PT-BR            | Current file               |
 
+<br />
+
 ## ⚙️ Deploys
 
 Para acessar a aplicação, segue o link: [preview](#)
@@ -13,9 +15,13 @@ Para acessar a aplicação, segue o link: [preview](#)
 
 Para o deploy eu usei o serviço da Vercel e criei um branch contendo um BFF (back-end for front-end) para facilitar o processo, já que as opções de deploy de back-end de graça são limitadas e a qualquer momento podem derrubar seu cluster por inatividade. Já para o banco de dados, eu usei o serviço da planetscale
 
+<br />
+
 ## 🧵 Como usar
 
 Caso queira rodar a aplicação na sua maquina, eu recomendo seguir esses passos
+
+<br />
 
 Clonando o repositorio
 
@@ -41,6 +47,8 @@ Para acessar o projeto localmente basta entrar nesse link dentro do seu browser
 http://localhost:3000
 ```
 
+<br />
+
 ## ✨ Tech Stack
 
 Estrutura do projeto (monorepo)
@@ -61,6 +69,8 @@ Estrutura do projeto (monorepo)
   | -----------------------|
 ```
 
+<br />
+
 ### Front-end
 
 - Next.js
@@ -73,16 +83,22 @@ Estrutura do projeto (monorepo)
 
 - [Figma](https://www.figma.com/file/JzfPFVyczStkdzC3zmoa9I/Desafio?type=design&node-id=0%3A1&mode=design&t=JFI0Rw9cMGWV1JIR-1)
 
+<br />
+
 ### Back-end
 
 #### Recursos
 
 - [Requisitos](https://docs.google.com/document/d/1_i_U5YOJZK3IrdC5BO6ICwCPtXsmTKIMNiEPwQx_rGE/edit?usp=sharing)
 
+<br />
+
 ### Outros
 
 - Vitest (testing)
 - Biome.js (linting)
+
+<br />
 
 ## 💨 Fim
 
