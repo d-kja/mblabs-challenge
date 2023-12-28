@@ -8,7 +8,7 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noUselessConstructor": "warn"
+        "noUselessConstructor": "off"
       }
     },
     "ignore": ["dist", "build", "*.config.*", ".next", "**/*.json"]

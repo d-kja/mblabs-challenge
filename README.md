@@ -73,15 +73,11 @@ Estrutura do projeto (monorepo)
 
 - [Figma](https://www.figma.com/file/JzfPFVyczStkdzC3zmoa9I/Desafio?type=design&node-id=0%3A1&mode=design&t=JFI0Rw9cMGWV1JIR-1)
 
----
-
 ### Back-end
 
 #### Recursos
 
 - [Requisitos](https://docs.google.com/document/d/1_i_U5YOJZK3IrdC5BO6ICwCPtXsmTKIMNiEPwQx_rGE/edit?usp=sharing)
-
----
 
 ### Outros
 

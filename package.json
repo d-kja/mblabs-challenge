@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "ci": "pnpm lint && pnpm test",
+    "ci": "pnpm lint:apply && pnpm test",
     "lint": "biome check apps packages",
     "lint:apply": "biome check apps packages --apply",
     "test": "echo \"no test environment set up\"\n",

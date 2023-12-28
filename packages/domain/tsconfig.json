@@ -1,0 +1,10 @@
+{
+  "extends": "@mb-labs/typescript-config/node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["vitest/globals"]
+  }
+}
