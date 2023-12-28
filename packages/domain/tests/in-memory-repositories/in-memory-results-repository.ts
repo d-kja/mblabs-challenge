@@ -10,9 +10,9 @@ export class InMemoryResultsRepository implements ResultsRepository {
     this.items.push(value);
   }
 
-  async deleteById(value: string): Promise<void> {
+  async delete(value: Result): Promise<void> {
     const itemIndex = this.items.findIndex(
-      (item) => item.id.toString() === value,
+      (item) => item.id.toString() === value.id.toString(),
     );
 
     this.items.splice(itemIndex, 1);

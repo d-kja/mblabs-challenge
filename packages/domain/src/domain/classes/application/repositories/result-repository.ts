@@ -9,7 +9,7 @@ type GetByBimesterAndClassTypeParams = {
 
 export abstract class ResultsRepository {
   abstract create(value: Result): Promise<void>;
-  abstract deleteById(value: string): Promise<void>;
+  abstract delete(value: Result): Promise<void>;
   abstract getById(value: string): Promise<Result | null>;
   abstract getByBimesterAndClassType(
     params: GetByBimesterAndClassTypeParams,
