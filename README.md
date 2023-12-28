@@ -1,81 +1,95 @@
-# Turborepo starter
+# 🚀 MB-Labs Challenge
 
-This is an official starter Turborepo.
+| Language options |                            |
+| ---------------- | -------------------------- |
+| EN-US            | [Link](languages/en-us.md) |
+| PT-BR            | Current file               |
 
-## Using this example
+## ⚙️ Deploys
 
-Run the following command:
+Para acessar a aplicação, segue o link: [preview](#)
 
-```sh
-npx create-turbo@latest
+### Detalhes de deploy
+
+Para o deploy eu usei o serviço da Vercel e criei um branch contendo um BFF (back-end for front-end) para facilitar o processo, já que as opções de deploy de back-end de graça são limitadas e a qualquer momento podem derrubar seu cluster por inatividade. Já para o banco de dados, eu usei o serviço da planetscale
+
+## 🧵 Como usar
+
+Caso queira rodar a aplicação na sua maquina, eu recomendo seguir esses passos
+
+Clonando o repositorio
+
+```bash
+git clone [url-do-repositório]
 ```
 
-## What's inside?
+Baixando as dependencias com PNPM
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+pnpm install
 ```
 
-### Develop
+Executando o projeto localmente
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+```bash
+docker compose up -d && pnpm run dev
 ```
 
-### Remote Caching
+Para acessar o projeto localmente basta entrar nesse link dentro do seu browser
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```md
+http://localhost:3000
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## ✨ Tech Stack
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Estrutura do projeto (monorepo)
 
 ```
-npx turbo link
+- Project/
+  |
+  | - Apps/
+  | |
+  | | - Front-end/
+  | | - Back-end/
+  |
+  | - Packages/
+  | |
+  | | - Linter-config/
+  | | - Typescript-config/
+  |
+  | -----------------------|
 ```
 
-## Useful Links
+### Front-end
 
-Learn more about the power of Turborepo:
+- Next.js
+- React Query
+- React Hook Form
+- Radix UI
+- Zod
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+#### Recursos
+
+- [Figma](https://www.figma.com/file/JzfPFVyczStkdzC3zmoa9I/Desafio?type=design&node-id=0%3A1&mode=design&t=JFI0Rw9cMGWV1JIR-1)
+
+---
+
+### Back-end
+
+#### Recursos
+
+- [Requisitos](https://docs.google.com/document/d/1_i_U5YOJZK3IrdC5BO6ICwCPtXsmTKIMNiEPwQx_rGE/edit?usp=sharing)
+
+---
+
+### Outros
+
+- Vitest (testing)
+- Biome.js (linting)
+
+## 💨 Fim
+
+Feito com carinho e organizado com o 💜
+
+Esse projeto está fazendo uso da licença MIT.

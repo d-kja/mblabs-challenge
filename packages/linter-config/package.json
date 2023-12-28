@@ -1,5 +1,5 @@
 {
-  "name": "@mb-labs/typescript-config",
+  "name": "@mb-labs/linter-config",
   "version": "1.0.0",
   "private": true,
   "license": "MIT"
