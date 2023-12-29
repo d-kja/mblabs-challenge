@@ -65,6 +65,7 @@ Estrutura do projeto (monorepo)
   |
   | - Packages/
   | |
+  | | - domain/
   | | - Linter-config/
   | | - Typescript-config/
   |
@@ -89,9 +90,33 @@ Estrutura do projeto (monorepo)
 
 ### Back-end
 
+- Nest.js
+- Prisma ORM
+- PostgreSQL
+- Docker
+- Zod / Zod Validation Error
+
 #### Recursos
 
 - [Requisitos](https://docs.google.com/document/d/1_i_U5YOJZK3IrdC5BO6ICwCPtXsmTKIMNiEPwQx_rGE/edit?usp=sharing)
+
+<br />
+
+### Packages
+
+Uso de Monorepo para facilitar o desenvolvimento de várias aplicações em conjunto
+
+#### Domain (Clean architecture with DDD)
+
+Desacoplamento da lógica de negócio, facilitando para a aplicação escalar e, também, durante a troca de Frameworks e ORMs
+
+#### Linter (Biome.js)
+
+Controle de configuração para o Linter do Monorepo
+
+#### Typescript config
+
+Controle das configurações de Typescript do Monorepo
 
 <br />
 
@@ -99,6 +124,7 @@ Estrutura do projeto (monorepo)
 
 - Vitest (testing)
 - Biome.js (linting)
+- Typescript (superset for type safety)
 
 <br />
 
