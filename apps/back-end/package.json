@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "author": "",
+  "type": "module",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -20,13 +21,16 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@mb-labs/domain": "workspace:*",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "3.1.1",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "@prisma/client": "5.7.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "zod": "3.22.4"
+    "zod": "3.22.4",
+    "zod-validation-error": "2.1.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
@@ -43,6 +47,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "jest": "^29.5.0",
     "prettier": "^3.0.0",
+    "prisma": "5.7.1",
     "source-map-support": "^0.5.21",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",

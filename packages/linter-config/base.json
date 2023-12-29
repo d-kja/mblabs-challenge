@@ -8,10 +8,16 @@
     "rules": {
       "recommended": true,
       "complexity": {
-        "noUselessConstructor": "off"
+        "noUselessConstructor": "off",
+        "noStaticOnlyClass": "off"
       }
     },
     "ignore": ["dist", "build", "*.config.*", ".next", "**/*.json"]
+  },
+  "javascript": {
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
   },
   "formatter": {
     "indentStyle": "space"

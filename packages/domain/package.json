@@ -2,15 +2,20 @@
   "name": "@mb-labs/domain",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
   },
   "license": "MIT",
   "devDependencies": {
     "@mb-labs/typescript-config": "workspace:*",
     "@types/node": "20.10.5",
+    "tsup": "8.0.1",
     "vite-tsconfig-paths": "4.2.2",
     "vitest": "1.1.0"
   }
