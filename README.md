@@ -3,9 +3,13 @@
 | Language options |                            |
 | ---------------- | -------------------------- |
 | EN-US            | [Link](languages/en-us.md) |
-| PT-BR            | Current file               |
+| PT-BR            | [Link](#)                  |
 
 <br />
+
+## Obs
+
+Qual o motivo de eu ter complicado o projeto, apesar de ser algo simples? Eu queria mostrar oque eu sou capaz de fazer, se eu fosse deixar o projeto o mais simplificado possível talvez eu teria conseguido fazer em umas duas horas ou menos, porém esse não era meu objetivo e eu espero que você mantenha isso em mente.
 
 ## ⚙️ Deploys
 

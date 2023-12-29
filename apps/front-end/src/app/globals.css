@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Layout padding/margin is uneven and doesn't follow the 4/8 rule */
+  @apply bg-base text-primary mt-[3.875rem] px-[2.125rem];
+}
+
+.class-type {
+  &[data-class='biologia'] {
+    @apply bg-class-biologia;
+  }
+  &[data-class='artes'] {
+    @apply bg-class-artes;
+  }
+  &[data-class='geografia'] {
+    @apply bg-class-geografia;
+  }
+  &[data-class='sociologia'] {
+    @apply bg-class-sociologia;
+  }
+}

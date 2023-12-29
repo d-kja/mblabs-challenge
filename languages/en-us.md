@@ -1,9 +1,9 @@
 # 🚀 MB-Labs Challenge
 
-| Language options |                            |
-| ---------------- | -------------------------- |
-| EN-US            | [Link](languages/en-us.md) |
-| PT-BR            | Current file               |
+| Language options |                      |
+| ---------------- | -------------------- |
+| EN-US            | [Link](#)            |
+| PT-BR            | [Link](../README.md) |
 
 <br />
 

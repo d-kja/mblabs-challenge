@@ -10,6 +10,9 @@
       "complexity": {
         "noUselessConstructor": "off",
         "noStaticOnlyClass": "off"
+      },
+      "a11y": {
+        "useKeyWithClickEvents": "off"
       }
     },
     "ignore": ["dist", "build", "*.config.*", ".next", "**/*.json"]
