@@ -9,6 +9,8 @@ const config: Config = {
         border: "#424242",
         accent: "#E9FF1A",
         danger: "#FF5964",
+        warning: "#FFFF99",
+        success: "#05FF00",
         class: {
           biologia: "#CC4090",
           artes: "#05A2C2",
@@ -19,8 +21,6 @@ const config: Config = {
       textColor: {
         primary: "#ECEDEE",
         secondary: "#6D6D6D",
-        neutral: "#FFFF99",
-        accent: "#05FF00",
       },
     },
   },
