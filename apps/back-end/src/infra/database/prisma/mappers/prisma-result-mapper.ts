@@ -1,5 +1,7 @@
-import { Bimester, Classes, Result } from "@mb-labs/domain";
 import { Result as PrismaResult } from "@prisma/client";
+import { Result } from "../../../../domain/classes/enterprise/entities/result.js";
+import { Bimester } from "../../../../domain/classes/enterprise/entities/value-object/bimester.js";
+import { Classes } from "../../../../domain/classes/enterprise/entities/value-object/class-type.js";
 
 export class PrismaResultMapper {
   static toPrismaCreate(data: Result) {

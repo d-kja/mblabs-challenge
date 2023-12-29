@@ -1,9 +1,7 @@
-import {
-  CreateResultUseCase,
-  DeleteResultUseCase,
-  ListResultsUseCase,
-} from "@mb-labs/domain";
 import { Module } from "@nestjs/common";
+import { CreateResultUseCase } from "../../domain/classes/application/use-cases/create-result.service.js";
+import { DeleteResultUseCase } from "../../domain/classes/application/use-cases/delete-result.service.js";
+import { ListResultsUseCase } from "../../domain/classes/application/use-cases/list-results.service.js";
 import { DatabaseModule } from "../database/database.module.js";
 import { CreateResultController } from "./controllers/create-result.controller.js";
 import { DeleteResultController } from "./controllers/delete-result.controller.js";

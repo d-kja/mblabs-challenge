@@ -1,6 +1,7 @@
-import { ResourceNotFoundError } from "@/core/errors/default/resource-not-found.js";
-import { Either, Left, Right } from "@/core/errors/either.js";
-import { UnknownObject } from "@/core/types/helpers.js";
+import { Injectable } from "@nestjs/common";
+import { ResourceNotFoundError } from "../../../../core/errors/default/resource-not-found.js";
+import { Either, Left, Right } from "../../../../core/errors/either.js";
+import { UnknownObject } from "../../../../core/types/helpers.js";
 import { ResultsRepository } from "../repositories/result-repository.js";
 
 export type DeleteResultRequest = {
@@ -8,6 +9,7 @@ export type DeleteResultRequest = {
 };
 export type DeleteResultResponse = Either<ResourceNotFoundError, UnknownObject>;
 
+@Injectable()
 export class DeleteResultUseCase {
   constructor(private resultRepository: ResultsRepository) {}
 

@@ -1,4 +1,3 @@
-import { DeleteResultUseCase, ResourceNotFoundError } from "@mb-labs/domain";
 import {
   BadRequestException,
   Controller,
@@ -7,6 +6,8 @@ import {
   NotFoundException,
   Param,
 } from "@nestjs/common";
+import { ResourceNotFoundError } from "../../../core/errors/default/resource-not-found.js";
+import { DeleteResultUseCase } from "../../../domain/classes/application/use-cases/delete-result.service.js";
 
 @Controller("/results/:id")
 export class DeleteResultController {

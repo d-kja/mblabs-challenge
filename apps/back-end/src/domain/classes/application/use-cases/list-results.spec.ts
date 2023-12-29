@@ -1,6 +1,6 @@
-import { UniqueId } from "@/core/entities/value-object/unique-id.js";
-import { makeResult } from "tests/factories/make-result.js";
-import { InMemoryResultsRepository } from "../../../../../tests/in-memory-repositories/in-memory-results-repository.js";
+import { makeResult } from "../../../../../test/factories/make-result.js";
+import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository.js";
+import { UniqueId } from "../../../../core/entities/value-object/unique-id.js";
 import { ListResultsUseCase } from "./list-results.service.js";
 
 let resultRepository: InMemoryResultsRepository;

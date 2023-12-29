@@ -149,6 +149,10 @@ importers:
         version: 1.1.0(@types/node@20.10.5)
 
   packages/domain:
+    dependencies:
+      '@nestjs/common':
+        specifier: ^10.0.0
+        version: 10.3.0(reflect-metadata@0.1.14)(rxjs@7.8.1)
     devDependencies:
       '@mb-labs/typescript-config':
         specifier: workspace:*

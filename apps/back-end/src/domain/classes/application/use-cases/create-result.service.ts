@@ -1,4 +1,5 @@
-import { Either, Left, Right } from "@/core/errors/either.js";
+import { Injectable } from "@nestjs/common";
+import { Either, Left, Right } from "../../../../core/errors/either.js";
 import { Result } from "../../enterprise/entities/result.js";
 import {
   Bimester,
@@ -24,6 +25,7 @@ export type CreateResultResponse = Either<
   }
 >;
 
+@Injectable()
 export class CreateResultUseCase {
   constructor(private resultRepository: ResultsRepository) {}
 
@@ -53,6 +55,8 @@ export class CreateResultUseCase {
       bimester: Bimester.create(bimester),
       classType: Classes.create(classType),
     });
+
+    await this.resultRepository.create(result);
 
     return Right.create({ result });
   }

@@ -1,4 +1,3 @@
-import { AlreadyExistsError, CreateResultUseCase } from "@mb-labs/domain";
 import {
   BadRequestException,
   Body,
@@ -9,6 +8,8 @@ import {
   UsePipes,
 } from "@nestjs/common";
 import { z } from "zod";
+import { CreateResultUseCase } from "../../../domain/classes/application/use-cases/create-result.service.js";
+import { AlreadyExistsError } from "../../../domain/classes/application/use-cases/errors/already-exists.js";
 import { ZodValidationPipe } from "../pipes/zod-validation-pipe.js";
 
 const createResultSchema = z.object({

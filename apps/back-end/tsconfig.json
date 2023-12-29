@@ -6,7 +6,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "target": "es2021",
     "sourceMap": true,
     "incremental": true,
     "skipLibCheck": true,
@@ -17,9 +17,7 @@
     "noFallthroughCasesInSwitch": false,
     "outDir": "./dist",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "types": ["vitest/globals"]
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

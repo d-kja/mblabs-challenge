@@ -1,7 +1,7 @@
-import { ResultsRepository } from "@/domain/classes/application/repositories/result-repository.js";
-import { Result } from "@/domain/classes/enterprise/entities/result.js";
-import { BimesterType } from "@/domain/classes/enterprise/entities/value-object/bimester.js";
-import { ClassesType } from "@/domain/classes/enterprise/entities/value-object/class-type.js";
+import { ResultsRepository } from "../../src/domain/classes/application/repositories/result-repository.js";
+import { Result } from "../../src/domain/classes/enterprise/entities/result.js";
+import { BimesterType } from "../../src/domain/classes/enterprise/entities/value-object/bimester.js";
+import { ClassesType } from "../../src/domain/classes/enterprise/entities/value-object/class-type.js";
 
 export class InMemoryResultsRepository implements ResultsRepository {
   public items: Result[] = [];

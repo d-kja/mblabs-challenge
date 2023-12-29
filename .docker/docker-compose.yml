@@ -1,9 +1,11 @@
+version: '3.5'
+
 services:
   database:
     image: bitnami/postgresql
     environment:
-      - POSTGRESQL_USERNAME=docker
-      - POSTGRESQL_PASSWORD=docker
-      - POSTGRESQL_DATABASE=mblabs
+      - POSTGRESQL_USERNAME=${POSTGRES_USER}
+      - POSTGRESQL_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRESQL_DATABASE=${POSTGRES_DB}
     ports:
-      - 5432:5432
+      - ${POSTGRES_PORT}:5432

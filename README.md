@@ -110,6 +110,8 @@ Uso de Monorepo para facilitar o desenvolvimento de várias aplicações em conj
 
 Desacoplamento da lógica de negócio, facilitando para a aplicação escalar e, também, durante a troca de Frameworks e ORMs
 
+`Pasta movida pra dentro do projeto de back-end, retendo seu código da mesma forma`
+
 #### Linter (Biome.js)
 
 Controle de configuração para o Linter do Monorepo

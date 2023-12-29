@@ -1,4 +1,5 @@
-import { Either, Right } from "@/core/errors/either.js";
+import { Injectable } from "@nestjs/common";
+import { Either, Right } from "../../../../core/errors/either.js";
 import { Result } from "../../enterprise/entities/result.js";
 import { ResultsRepository } from "../repositories/result-repository.js";
 
@@ -9,6 +10,7 @@ export type ListResultsResponse = Either<
   }
 >;
 
+@Injectable()
 export class ListResultsUseCase {
   constructor(private resultRepository: ResultsRepository) {}
 

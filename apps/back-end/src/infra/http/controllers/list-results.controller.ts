@@ -1,5 +1,5 @@
-import { ListResultsUseCase } from "@mb-labs/domain";
 import { BadRequestException, Controller, Get, HttpCode } from "@nestjs/common";
+import { ListResultsUseCase } from "../../../domain/classes/application/use-cases/list-results.service.js";
 import { ResultPresenter } from "../presenters/result-presenter.js";
 
 @Controller("/results")

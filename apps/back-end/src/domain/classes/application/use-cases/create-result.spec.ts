@@ -1,5 +1,5 @@
-import { makeResult } from "../../../../../tests/factories/make-result.js";
-import { InMemoryResultsRepository } from "../../../../../tests/in-memory-repositories/in-memory-results-repository.js";
+import { makeResult } from "../../../../../test/factories/make-result.js";
+import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository.js";
 import { Bimester } from "../../enterprise/entities/value-object/bimester.js";
 import { Classes } from "../../enterprise/entities/value-object/class-type.js";
 import { CreateResultUseCase } from "./create-result.service.js";
