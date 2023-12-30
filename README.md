@@ -44,7 +44,17 @@ pnpm install
 Executando o projeto localmente
 
 ```bash
-docker compose up -d && pnpm run dev
+docker compose -f ./.docker/docker-compose.yml up -d
+```
+
+```bash
+cd apps/back-end && pnpm dlx prisma migrate deploy
+```
+
+After migrating the database schema you need to go back to the root of the project and run the following:
+
+```bash
+pnpm run dev
 ```
 
 Para acessar o projeto localmente basta entrar nesse link dentro do seu browser
