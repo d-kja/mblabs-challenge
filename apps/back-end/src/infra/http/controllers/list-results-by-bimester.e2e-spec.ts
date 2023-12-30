@@ -9,7 +9,7 @@ import { PrismaService } from '../../../infra/database/prisma/prisma.service.js'
 import request from 'supertest'
 import { ResultFactory } from '../../../../test/factories/make-result.js'
 
-describe('[GET/E2E] list-results', () => {
+describe('[GET/E2E] list-results-by-bimester', () => {
   let app: INestApplication
   let prisma: PrismaService
   let resultFactory: ResultFactory
@@ -28,19 +28,21 @@ describe('[GET/E2E] list-results', () => {
     await app.init()
   })
 
-  test('[GET] /results', async () => {
+  test('[GET] /results/bimester/:bimester', async () => {
     await Promise.all([
-      resultFactory.makePrismaResult({
-        bimester: Bimester.create('segundo'),
-        classType: Classes.create('artes'),
-      }),
       resultFactory.makePrismaResult({
         bimester: Bimester.create('primeiro'),
         classType: Classes.create('artes'),
       }),
+      resultFactory.makePrismaResult({
+        bimester: Bimester.create('primeiro'),
+        classType: Classes.create('biologia'),
+      }),
     ])
 
-    const response = await request(app.getHttpServer()).get('/results').send({})
+    const response = await request(app.getHttpServer())
+      .get('/results/bimester/primeiro')
+      .send({})
 
     expect(response.statusCode).toBe(200)
     expect(response.body.results).toHaveLength(2)
