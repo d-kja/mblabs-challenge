@@ -51,7 +51,7 @@ docker compose -f ./.docker/docker-compose.yml up -d
 cd apps/back-end && pnpm dlx prisma migrate deploy
 ```
 
-After migrating the database schema you need to go back to the root of the project and run the following:
+Depois de migrar o schema do banco de dados, você vai precisar voltar para a pasta root do projeto e executar o seguinte comando:
 
 ```bash
 pnpm run dev
