@@ -17,7 +17,7 @@ Para acessar a aplicação, segue o link: [preview](#) (não foi feito deploy ai
 
 ### Detalhes de deploy
 
-Para o deploy eu usei o serviço da Vercel e criei um branch contendo um BFF (back-end for front-end) para facilitar o processo, já que as opções de deploy de back-end de graça são limitadas e a qualquer momento podem derrubar seu cluster por inatividade. Já para o banco de dados, eu usei o serviço da planetscale
+Para o deploy eu vou usar o serviço da Vercel e eu vou criar um branch contendo um BFF (back-end for front-end) para facilitar o processo, já que as opções de deploy de back-end de graça são limitadas e a qualquer momento podem derrubar seu cluster por inatividade. Já para o banco de dados, eu pretendo usar o serviço da planetscale
 
 [Roadmap](TODO.md)
 
