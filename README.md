@@ -13,7 +13,7 @@ Qual o motivo de eu ter complicado o projeto, apesar de ser algo simples? Eu que
 
 ## ⚙️ Deploys
 
-Para acessar a aplicação, segue o link: [preview](#)
+Para acessar a aplicação, segue o link: [preview](#) (não foi feito deploy ainda)
 
 ### Detalhes de deploy
 
