@@ -34,8 +34,11 @@ export const BimesterSection: FC<BimesterSectionProps> = ({
           Bimestre {bimesterToNumber[bimester]}
         </strong>
 
-        <button type="button" className="stroke-black bg-accent px-3 rounded">
-          <PlusIcon />
+        <button
+          type="button"
+          className="stroke-black bg-accent px-3 py-[.15rem] rounded-xl"
+        >
+          <PlusIcon strokeClass="fill-black" />
         </button>
       </div>
 

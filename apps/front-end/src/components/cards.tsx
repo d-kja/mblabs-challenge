@@ -20,7 +20,7 @@ export const Cards: FC<CardsProps> = ({ classType, handleDelete }) => {
   return (
     <div
       className={
-        "max-w-[12rem] aspect-square w-full flex flex-col flex-1 gap-1 rounded-[1.25rem] p-4  relative"
+        "max-w-[12rem] aspect-square w-full flex flex-col flex-1 gap-1 rounded-[1.25rem] p-4 relative"
       }
       data-class={classType.name}
     >
@@ -46,7 +46,7 @@ export const Cards: FC<CardsProps> = ({ classType, handleDelete }) => {
             <TrashIcon />
           </button>
         </Tooltip.Trigger>
-        <Tooltip.Content className="relative -top-16 md:-right-28 -right-[4.5rem]">
+        <Tooltip.Content className="absolute -top-6 -right-9">
           Remover
         </Tooltip.Content>
       </Tooltip.Wrapper>

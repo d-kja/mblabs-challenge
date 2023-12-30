@@ -67,8 +67,8 @@ export class PrismaResultsRepository implements ResultsRepository {
   async findManyByBimester(value: BimesterType): Promise<Result[]> {
     const results = await this.prisma.result.findMany({
       where: {
-        bimester: value
-      }
+        bimester: value,
+      },
     });
 
     return results.map((result) => PrismaResultMapper.toDomain(result));

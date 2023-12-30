@@ -1,33 +1,33 @@
-import { makeResult } from '../../../../../test/factories/make-result.js'
-import { InMemoryResultsRepository } from '../../../../../test/in-memory-repositories/in-memory-results-repository.js'
-import { UniqueId } from '../../../../core/entities/value-object/unique-id.js'
-import { Bimester } from '../../enterprise/entities/value-object/bimester.js'
-import { ListResultsByBimesterUseCase } from './list-results-by-bimester.service.js'
+import { makeResult } from "../../../../../test/factories/make-result.js";
+import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository.js";
+import { UniqueId } from "../../../../core/entities/value-object/unique-id.js";
+import { Bimester } from "../../enterprise/entities/value-object/bimester.js";
+import { ListResultsByBimesterUseCase } from "./list-results-by-bimester.service.js";
 
-let resultRepository: InMemoryResultsRepository
-let sut: ListResultsByBimesterUseCase
+let resultRepository: InMemoryResultsRepository;
+let sut: ListResultsByBimesterUseCase;
 
-describe('@use-case/list-result-by-bimester', async () => {
+describe("@use-case/list-result-by-bimester", async () => {
   beforeEach(() => {
-    resultRepository = new InMemoryResultsRepository()
-    sut = new ListResultsByBimesterUseCase(resultRepository)
-  })
+    resultRepository = new InMemoryResultsRepository();
+    sut = new ListResultsByBimesterUseCase(resultRepository);
+  });
 
-  it('should be able to list available results', async () => {
+  it("should be able to list available results", async () => {
     resultRepository.items.push(
-      makeResult({ bimester: Bimester.create('primeiro') }, 'result-1'),
-      makeResult({ bimester: Bimester.create('primeiro') }, 'result-2'),
-    )
+      makeResult({ bimester: Bimester.create("primeiro") }, "result-1"),
+      makeResult({ bimester: Bimester.create("primeiro") }, "result-2"),
+    );
 
-    const result = await sut.handle({ bimester: 'primeiro' })
+    const result = await sut.handle({ bimester: "primeiro" });
 
-    expect(result.isRight()).toBe(true)
-    expect(result.value?.results).toHaveLength(2)
+    expect(result.isRight()).toBe(true);
+    expect(result.value?.results).toHaveLength(2);
     expect(result.value?.results).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ id: UniqueId.create('result-1') }),
-        expect.objectContaining({ id: UniqueId.create('result-2') }),
+        expect.objectContaining({ id: UniqueId.create("result-1") }),
+        expect.objectContaining({ id: UniqueId.create("result-2") }),
       ]),
-    )
-  })
-})
+    );
+  });
+});
