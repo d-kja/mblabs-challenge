@@ -1,7 +1,7 @@
-import { ResourceNotFoundError } from "src/core/errors/default/resource-not-found.js";
-import { makeResult } from "test/factories/make-result.js";
-import { InMemoryResultsRepository } from "test/in-memory-repositories/in-memory-results-repository.js";
-import { DeleteResultUseCase } from "./delete-result.service.js";
+import { ResourceNotFoundError } from "src/core/errors/default/resource-not-found";
+import { makeResult } from "test/factories/make-result";
+import { InMemoryResultsRepository } from "test/in-memory-repositories/in-memory-results-repository";
+import { DeleteResultUseCase } from "./delete-result.service";
 
 let resultRepository: InMemoryResultsRepository;
 let sut: DeleteResultUseCase;

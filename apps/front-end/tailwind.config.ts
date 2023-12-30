@@ -18,6 +18,9 @@ const config: Config = {
           sociologia: "#9B19C2",
         },
       },
+      borderColor: {
+        input: "#424242",
+      },
       textColor: {
         primary: "#ECEDEE",
         secondary: "#6D6D6D",

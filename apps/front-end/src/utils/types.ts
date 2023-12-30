@@ -8,3 +8,10 @@ export type ClassType = {
 
   createdAt: Date;
 };
+
+export const bimesterToNumber = {
+  primeiro: 1,
+  segundo: 2,
+  terceiro: 3,
+  quarto: 4,
+} as const;

@@ -1,10 +1,10 @@
-import { makeResult } from "../../../../../test/factories/make-result.js";
-import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository.js";
-import { Bimester } from "../../enterprise/entities/value-object/bimester.js";
-import { Classes } from "../../enterprise/entities/value-object/class-type.js";
-import { CreateResultUseCase } from "./create-result.service.js";
-import { AlreadyExistsError } from "./errors/already-exists.js";
-import { InvalidRequestError } from "./errors/invalid-request.js";
+import { makeResult } from "../../../../../test/factories/make-result";
+import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository";
+import { Bimester } from "../../enterprise/entities/value-object/bimester";
+import { Classes } from "../../enterprise/entities/value-object/class-type";
+import { CreateResultUseCase } from "./create-result.service";
+import { AlreadyExistsError } from "./errors/already-exists";
+import { InvalidRequestError } from "./errors/invalid-request";
 
 let resultRepository: InMemoryResultsRepository;
 let sut: CreateResultUseCase;

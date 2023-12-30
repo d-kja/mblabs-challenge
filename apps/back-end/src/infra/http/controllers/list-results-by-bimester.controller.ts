@@ -5,10 +5,10 @@ import {
   HttpCode,
   Param,
 } from "@nestjs/common";
-import { ListResultsByBimesterUseCase } from "src/domain/classes/application/use-cases/list-results-by-bimester.service.js";
+import { ListResultsByBimesterUseCase } from "src/domain/classes/application/use-cases/list-results-by-bimester.service";
 import { z } from "zod";
-import { ZodValidationPipe } from "../pipes/zod-validation-pipe.js";
-import { ResultPresenter } from "../presenters/result-presenter.js";
+import { ZodValidationPipe } from "../pipes/zod-validation-pipe";
+import { ResultPresenter } from "../presenters/result-presenter";
 
 const bimesterParamSchema = z.enum([
   "primeiro",

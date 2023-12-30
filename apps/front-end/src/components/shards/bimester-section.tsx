@@ -1,29 +1,67 @@
 "use client";
 
-import { BimesterType, ClassType } from "@/utils/types";
+import { api } from "@/utils/axios";
+import { queryClient } from "@/utils/tanstack-query";
+import { BimesterType, ClassTypeNames, bimesterToNumber } from "@/utils/types";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { AxiosError } from "axios";
 import { FC } from "react";
+import toast from "react-hot-toast";
 import { Cards } from "../cards";
 import { PlusIcon } from "../svg/plus-icon";
+import { Tooltip } from "../tooltip";
+import { CreateGradeCard } from "./create-grade-card";
 
 interface BimesterSectionProps {
   bimester: BimesterType;
-  classes: {
-    classType: ClassType;
-    handleDelete: (id: string) => Promise<void>;
-  }[];
 }
 
-const bimesterToNumber = {
-  primeiro: 1,
-  segundo: 2,
-  terceiro: 3,
-  quarto: 4,
-} as const;
+type ResponseType = {
+  id: string;
+  bimester: BimesterType;
+  classType: ClassTypeNames;
+  grade: number;
+  createdAt: string;
+  updatedAt: string | null;
+};
 
-export const BimesterSection: FC<BimesterSectionProps> = ({
-  bimester,
-  classes,
-}) => {
+const toastStyle = {
+  className: "border border-zinc-600",
+  style: {
+    background: "#0F0F0F",
+    color: "#ECEDEE",
+  },
+};
+
+export const BimesterSection: FC<BimesterSectionProps> = ({ bimester }) => {
+  const { data = [] } = useQuery({
+    queryKey: [`bimester-${bimesterToNumber[bimester]}`],
+    queryFn: async (): Promise<ResponseType[]> => {
+      const response = await api.get(`/results/bimester/${bimester}`);
+
+      return response.data?.results ?? [];
+    },
+  });
+  const { mutate } = useMutation({
+    mutationFn: async (id: string) => api.delete(`/results/${id}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: [`bimester-${bimesterToNumber[bimester]}`],
+      });
+      toast.success("Deletado com sucesso!", toastStyle);
+    },
+    onSettled(_data, error) {
+      if (error) {
+        const axiosError = (error as AxiosError<{ message: string }>)?.response
+          ?.data;
+
+        const toastMessage =
+          axiosError?.message ?? "Não foi possível deletar a nota";
+        toast.error(toastMessage, toastStyle);
+      }
+    },
+  });
+
   return (
     <section
       title={`Bimestre ${bimesterToNumber[bimester]}`}
@@ -34,21 +72,40 @@ export const BimesterSection: FC<BimesterSectionProps> = ({
           Bimestre {bimesterToNumber[bimester]}
         </strong>
 
-        <button
-          type="button"
-          className="stroke-black bg-accent px-3 py-[.15rem] rounded-xl"
-        >
-          <PlusIcon strokeClass="fill-black" />
-        </button>
+        <Tooltip.Wrapper>
+          <Tooltip.Trigger>
+            <CreateGradeCard bimester={bimester}>
+              <button
+                type="button"
+                className="bg-accent px-3 py-[.15rem] rounded-xl flex items-center gap-2"
+                title="lançar nota"
+              >
+                <span className="hidden lg:inline-block text-base font-semibold">
+                  Lançar nota
+                </span>
+                <PlusIcon strokeClass="fill-base" />
+              </button>
+            </CreateGradeCard>
+          </Tooltip.Trigger>
+          <Tooltip.Content className="absolute -top-6 -right-12 w-[6.5rem] lg:hidden">
+            Lançar nota
+          </Tooltip.Content>
+        </Tooltip.Wrapper>
       </div>
 
-      <div className="grid grid-cols-2 auto-cols-[1/2] md:grid-cols-3 md:auto-cols-[1/3] lg:grid-cols-4 lg:auto-cols-[1/4] xl:grid-cols-5 xl:auto-cols-[1/5] place-items-center gap-4">
-        {classes.map(({ classType, handleDelete }) => {
+      {/* I prefer this over flex flex-wrap justify-between because if there's less items in the list, lets say 2 or 3, the spacing is going to become awkward */}
+      <div className="grid grid-cols-2 auto-cols-[1/2] md:grid-cols-3 md:auto-cols-[1/3] lg:grid-cols-4 lg:auto-cols-[1/4] place-items-center gap-8">
+        {data.map(({ id, classType, createdAt, grade }) => {
           return (
             <Cards
-              key={classType.id}
-              classType={classType}
-              handleDelete={handleDelete}
+              key={id}
+              classType={{
+                createdAt: new Date(createdAt),
+                grade,
+                id,
+                name: classType,
+              }}
+              handleDelete={async (id: string) => mutate(id)}
             />
           );
         })}

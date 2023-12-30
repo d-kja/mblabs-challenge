@@ -1,6 +1,6 @@
-import { Result } from "../../enterprise/entities/result.js";
-import { BimesterType } from "../../enterprise/entities/value-object/bimester.js";
-import { ClassesType } from "../../enterprise/entities/value-object/class-type.js";
+import { Result } from "../../enterprise/entities/result";
+import { BimesterType } from "../../enterprise/entities/value-object/bimester";
+import { ClassesType } from "../../enterprise/entities/value-object/class-type";
 
 type GetByBimesterAndClassTypeParams = {
   classType: ClassesType;

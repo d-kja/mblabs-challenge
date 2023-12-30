@@ -40,7 +40,7 @@ export const Cards: FC<CardsProps> = ({ classType, handleDelete }) => {
         <Tooltip.Trigger>
           <button
             type="button"
-            className=" stroke-danger fill-danger hover:brightness-75 transition-[filter] absolute md:top-0 md:-right-9 top-2 right-1 md:brightness-100 brightness-50"
+            className="  fill-danger hover:brightness-75 transition-[filter] absolute md:top-0 md:-right-9 top-2 right-1 md:brightness-100 brightness-50"
             onClick={() => handleDelete(classType.id)}
           >
             <TrashIcon />

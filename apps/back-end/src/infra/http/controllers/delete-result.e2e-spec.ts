@@ -1,11 +1,11 @@
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { AppModule } from "src/infra/app.module.js";
-import { DatabaseModule } from "src/infra/database/database.module.js";
-import { PrismaService } from "src/infra/database/prisma/prisma.service.js";
+import { AppModule } from "src/infra/app.module";
+import { DatabaseModule } from "src/infra/database/database.module";
+import { PrismaService } from "src/infra/database/prisma/prisma.service";
 
 import request from "supertest";
-import { ResultFactory } from "test/factories/make-result.js";
+import { ResultFactory } from "test/factories/make-result";
 
 describe("[DELETE/E2E] delete-result", () => {
   let app: INestApplication;

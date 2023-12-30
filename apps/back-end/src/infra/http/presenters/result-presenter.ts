@@ -1,4 +1,4 @@
-import { Result } from "../../../domain/classes/enterprise/entities/result.js";
+import { Result } from "../../../domain/classes/enterprise/entities/result";
 
 export class ResultPresenter {
   static toHTTP(value: Result) {

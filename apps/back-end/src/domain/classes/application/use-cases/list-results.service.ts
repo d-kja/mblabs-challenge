@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import { Either, Right } from "../../../../core/errors/either.js";
-import { Result } from "../../enterprise/entities/result.js";
-import { ResultsRepository } from "../repositories/result-repository.js";
+import { Either, Right } from "../../../../core/errors/either";
+import { Result } from "../../enterprise/entities/result";
+import { ResultsRepository } from "../repositories/result-repository";
 
 export type ListResultsResponse = Either<
   null,

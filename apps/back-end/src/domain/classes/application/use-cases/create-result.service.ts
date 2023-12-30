@@ -1,17 +1,17 @@
 import { Injectable } from "@nestjs/common";
-import { Either, Left, Right } from "../../../../core/errors/either.js";
-import { Result } from "../../enterprise/entities/result.js";
+import { Either, Left, Right } from "../../../../core/errors/either";
+import { Result } from "../../enterprise/entities/result";
 import {
   Bimester,
   BimesterType,
-} from "../../enterprise/entities/value-object/bimester.js";
+} from "../../enterprise/entities/value-object/bimester";
 import {
   Classes,
   ClassesType,
-} from "../../enterprise/entities/value-object/class-type.js";
-import { ResultsRepository } from "../repositories/result-repository.js";
-import { AlreadyExistsError } from "./errors/already-exists.js";
-import { InvalidRequestError } from "./errors/invalid-request.js";
+} from "../../enterprise/entities/value-object/class-type";
+import { ResultsRepository } from "../repositories/result-repository";
+import { AlreadyExistsError } from "./errors/already-exists";
+import { InvalidRequestError } from "./errors/invalid-request";
 
 export type CreateResultRequest = {
   grade: number;

@@ -1,13 +1,13 @@
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { Bimester } from "../../../domain/classes/enterprise/entities/value-object/bimester.js";
-import { Classes } from "../../../domain/classes/enterprise/entities/value-object/class-type.js";
-import { AppModule } from "../../../infra/app.module.js";
-import { DatabaseModule } from "../../../infra/database/database.module.js";
-import { PrismaService } from "../../../infra/database/prisma/prisma.service.js";
+import { Bimester } from "../../../domain/classes/enterprise/entities/value-object/bimester";
+import { Classes } from "../../../domain/classes/enterprise/entities/value-object/class-type";
+import { AppModule } from "../../../infra/app.module";
+import { DatabaseModule } from "../../../infra/database/database.module";
+import { PrismaService } from "../../../infra/database/prisma/prisma.service";
 
 import request from "supertest";
-import { ResultFactory } from "../../../../test/factories/make-result.js";
+import { ResultFactory } from "../../../../test/factories/make-result";
 
 describe("[GET/E2E] list-results", () => {
   let app: INestApplication;

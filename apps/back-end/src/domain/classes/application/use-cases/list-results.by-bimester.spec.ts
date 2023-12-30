@@ -1,8 +1,8 @@
-import { makeResult } from "../../../../../test/factories/make-result.js";
-import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository.js";
-import { UniqueId } from "../../../../core/entities/value-object/unique-id.js";
-import { Bimester } from "../../enterprise/entities/value-object/bimester.js";
-import { ListResultsByBimesterUseCase } from "./list-results-by-bimester.service.js";
+import { makeResult } from "../../../../../test/factories/make-result";
+import { InMemoryResultsRepository } from "../../../../../test/in-memory-repositories/in-memory-results-repository";
+import { UniqueId } from "../../../../core/entities/value-object/unique-id";
+import { Bimester } from "../../enterprise/entities/value-object/bimester";
+import { ListResultsByBimesterUseCase } from "./list-results-by-bimester.service";
 
 let resultRepository: InMemoryResultsRepository;
 let sut: ListResultsByBimesterUseCase;

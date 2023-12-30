@@ -1,7 +1,7 @@
 import { Result as PrismaResult } from "@prisma/client";
-import { Result } from "../../../../domain/classes/enterprise/entities/result.js";
-import { Bimester } from "../../../../domain/classes/enterprise/entities/value-object/bimester.js";
-import { Classes } from "../../../../domain/classes/enterprise/entities/value-object/class-type.js";
+import { Result } from "../../../../domain/classes/enterprise/entities/result";
+import { Bimester } from "../../../../domain/classes/enterprise/entities/value-object/bimester";
+import { Classes } from "../../../../domain/classes/enterprise/entities/value-object/class-type";
 
 export class PrismaResultMapper {
   static toPrismaCreate(data: Result) {

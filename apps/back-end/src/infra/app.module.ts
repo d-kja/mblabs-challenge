@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { envSchema } from "./env/env.js";
-import { EnvModule } from "./env/env.module.js";
-import { HttpModule } from "./http/http.module.js";
+import { envSchema } from "./env/env";
+import { EnvModule } from "./env/env.module";
+import { HttpModule } from "./http/http.module";
 
 @Module({
   imports: [

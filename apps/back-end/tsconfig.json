@@ -1,23 +1,25 @@
 {
-  "extends": "@mb-labs/typescript-config/node.json",
   "compilerOptions": {
-    "declaration": true,
+    "module": "commonjs",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2021",
+    "target": "es2022",
     "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strict": true,
+    "strictNullChecks": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "outDir": "./dist",
-    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "types": ["vitest/globals"]
-  },
-  "exclude": ["node_modules", "dist"]
+  }
 }

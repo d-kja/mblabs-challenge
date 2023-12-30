@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { Either, Right } from "../../../../core/errors/either.js";
-import { Result } from "../../enterprise/entities/result.js";
-import { BimesterType } from "../../enterprise/entities/value-object/bimester.js";
-import { ResultsRepository } from "../repositories/result-repository.js";
+import { Either, Right } from "../../../../core/errors/either";
+import { Result } from "../../enterprise/entities/result";
+import { BimesterType } from "../../enterprise/entities/value-object/bimester";
+import { ResultsRepository } from "../repositories/result-repository";
 
 export type ListResultsByBimesterRequest = {
   bimester: BimesterType;

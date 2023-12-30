@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
-import { ResultsRepository } from "../../domain/classes/application/repositories/result-repository.js";
-import { PrismaService } from "./prisma/prisma.service.js";
-import { PrismaResultsRepository } from "./prisma/repositories/prisma-result-repository.js";
+import { ResultsRepository } from "../../domain/classes/application/repositories/result-repository";
+import { PrismaService } from "./prisma/prisma.service";
+import { PrismaResultsRepository } from "./prisma/repositories/prisma-result-repository";
 
 @Module({
   providers: [

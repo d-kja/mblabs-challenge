@@ -1,7 +1,7 @@
-import { Entity } from "../../../../core/entities/entity.js";
-import { Optional } from "../../../../core/types/helpers.js";
-import { Bimester } from "./value-object/bimester.js";
-import { Classes } from "./value-object/class-type.js";
+import { Entity } from "../../../../core/entities/entity";
+import { Optional } from "../../../../core/types/helpers";
+import { Bimester } from "./value-object/bimester";
+import { Classes } from "./value-object/class-type";
 
 export interface ResultProps {
   /**

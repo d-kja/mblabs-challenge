@@ -8,9 +8,9 @@ import {
   UsePipes,
 } from "@nestjs/common";
 import { z } from "zod";
-import { CreateResultUseCase } from "../../../domain/classes/application/use-cases/create-result.service.js";
-import { AlreadyExistsError } from "../../../domain/classes/application/use-cases/errors/already-exists.js";
-import { ZodValidationPipe } from "../pipes/zod-validation-pipe.js";
+import { CreateResultUseCase } from "../../../domain/classes/application/use-cases/create-result.service";
+import { AlreadyExistsError } from "../../../domain/classes/application/use-cases/errors/already-exists";
+import { ZodValidationPipe } from "../pipes/zod-validation-pipe";
 
 const createResultSchema = z.object({
   bimester: z.enum(["primeiro", "segundo", "terceiro", "quarto"]),

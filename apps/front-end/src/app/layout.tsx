@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
+import { GlobalWrapper } from "@/store/global-context";
 import "./globals.css";
 
 const font = Montserrat({ subsets: ["latin"] });
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <GlobalWrapper>{children}</GlobalWrapper>
+      </body>
     </html>
   );
 }
